@@ -1,0 +1,1409 @@
+*,
+*::after,
+*::before {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --graycolor: rgb(181, 181, 181);
+    --darkgraycolor: rgb(125, 137, 153);
+}
+
+/*تعریف فونت*/
+@font-face {
+    font-family: 'myfont';
+    src: url(./pic/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format(woff2),
+        url(./pic/entypo-fontello.woff2), url(./pic/medical.woff);
+}
+
+body {
+    font-family: 'myfont', sans-serif;
+}
+
+/*نوار آبی رنگ بالای صفحه*/
+.top-line {
+    width: 100%;
+    height: 30px;
+    padding-left: 30px;
+    padding-right: 20px;
+    background-color: rgb(64, 168, 228);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/*منوی داخل نوار آبی رنگ به همراه لینک ها*/
+.top-line>ul {
+    width: 290px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.top-line>ul>a>li {
+    height: 14px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+.top-line>ul>a:nth-child(2) {
+    border-right: 1px solid rgba(255, 255, 255, 0.323);
+    border-left: 1px solid rgba(255, 255, 255, 0.323);
+}
+
+/*تغییرات منو پس از آنکه ماوس رویش قرار گرفت*/
+.top-line>ul>a>li:hover {
+    text-decoration: underline;
+}
+
+/*بخش بالای صفحه شامل لوگو و ایکون ها*/
+.header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-left: 140px;
+}
+
+.header>a {
+    margin: auto;
+}
+
+/*لوگو*/
+.logo {
+    width: 350px;
+    height: 90px;
+    margin: auto;
+    background-image: url(./pic/logo-2.png);
+    background-position: center center;
+    background-size: cover;
+}
+
+/*آیکون ها و محل قرار گیری آن ها*/
+.header>div:nth-child(2) {
+    width: 90px;
+    height: 30px;
+    display: flex;
+}
+
+.header>div:nth-child(2)>a {
+    width: 33%;
+    height: 100%;
+}
+
+.header>div:nth-child(2)>a>i {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--graycolor);
+}
+
+/*تغییرات آیکون ها وقتی ماوس روی آن هاست*/
+.header>div:nth-child(2)>a:first-child>i:hover {
+    background-color: rgb(55, 88, 155);
+    color: white;
+    border-radius: 50%;
+}
+
+.header>div:nth-child(2)>a:nth-child(2)>i:hover {
+    background-color: rgb(166, 118, 88);
+    color: white;
+    border-radius: 50%;
+}
+
+.header>div:nth-child(2)>a:nth-child(3)>i:hover {
+    background-color: rgb(159, 174, 55);
+    color: white;
+    border-radius: 50%;
+}
+
+/*منوی بالای صفحه*/
+#toggle {
+    display: none;
+}
+
+.toggle-container>span {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(252, 252, 252);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+nav>ul {
+    width: 600px;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+}
+
+nav>ul>a {
+    height: 100%;
+}
+
+nav>ul>a>li {
+    height: 100%;
+    border-left: 1px solid rgba(195, 193, 193, 0.18);
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--graycolor);
+
+}
+
+nav>ul>a:first-child>li {
+    color: var(--darkgraycolor);
+}
+
+/*تغییرات منو پس از قرارگیری ماوس روی آن ها*/
+nav>ul>a>li:hover {
+    background-color: rgb(245, 245, 245);
+    color: var(--darkgraycolor);
+}
+
+/*منویی که زیر مورد دوم باز می شود*/
+.mm {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 108px;
+    width: 220px;
+    height: 120px;
+    background-color: white;
+    border: 1px solid rgba(183, 183, 183, 0.441);
+    border-top: none;
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.109);
+}
+
+.mm>ul {
+    list-style: none;
+}
+
+.mm>ul>a {
+    width: 220px;
+    height: 40px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    color: var(--graycolor);
+}
+
+.mm>ul>a>span {
+    display: none;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+/*نمایش منو زیر مورد دوم در صورت قرار گیری ماوس روی آن*/
+.mm:hover {
+    display: flex;
+}
+
+.md:hover~.mm {
+    display: flex;
+}
+
+.mm>ul>a:hover {
+    background-color: rgb(248, 248, 248);
+    color: black;
+}
+
+/*بخش اول صفحه شما عنوان و دو دکمه و عکس بکگراند*/
+.doc1 {
+    width: 100%;
+    height: 630px;
+    background-image: url(./pic/doc-1-1500x630.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 185px;
+    padding-left: 6%;
+}
+
+.doc1>.title {
+    width: 420px;
+    height: 125px;
+    font-size: 44px;
+    line-height: 1.2em;
+    color: rgb(68, 68, 68);
+}
+
+.doc1>.subtitle {
+    width: 420px;
+    height: 70px;
+    font-size: 20px;
+    color: rgb(148, 158, 177);
+}
+
+/*دکمه ها*/
+.doc1>a>.button1 {
+    width: 140px;
+    height: 45px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: white;
+    float: left;
+    background-color: rgb(64, 168, 228);
+    border: 1px solid rgba(186, 186, 186, 0.638);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doc1>a>.button2 {
+    width: 180px;
+    height: 45px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(112, 121, 144);
+    float: left;
+    background-color: rgb(252, 252, 252);
+    border: 1px solid rgba(186, 186, 186, 0.638);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*تغییرات دکمه ها پس از قرار گیری ماوس روی آن ها*/
+.doc1>a>.button1:hover {
+    background-color: rgb(83, 176, 229);
+}
+
+.doc1>a>.button2:hover {
+    color: rgb(69, 69, 70);
+}
+
+/*دو نوار آبی کوچک کنار کادرهای آبی سه تایی*/
+.line1 {
+    width: 50%;
+    height: 10px;
+    background-color: rgb(35, 136, 194);
+    float: left;
+}
+
+.line2 {
+    width: 50%;
+    height: 10px;
+    background-color: rgb(95, 180, 228);
+    float: left;
+}
+
+/*کادرهای آبی سه تایی*/
+.bluebox {
+    width: 88%;
+    height: 320px;
+    margin-left: 6%;
+    float: left;
+    margin-top: -70px;
+    display: flex;
+    color: white;
+}
+
+.bluebox>.box1 {
+    height: 100%;
+    width: 33.33%;
+    background-color: rgb(35, 136, 194);
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bluebox>.box2 {
+    height: 100%;
+    width: 33.33%;
+    background-color: rgb(55, 156, 214);
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bluebox>.box3 {
+    height: 100%;
+    width: 33.33%;
+    background-color: rgb(95, 180, 228);
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*محتویات و توضیحات درون کادر اول از کادرهای سه تایی ابی*/
+.bluebox>.box1>span {
+    font-size: 60px;
+}
+
+.bluebox>.box1>.title {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+.bluebox>.box1>.subtitle {
+    font-size: 17px;
+    padding-bottom: 25px;
+}
+
+/*دکمه درون کادر اول از کادرهای سه تایی*/
+.bluebox>.box1>a>.button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/*تغییرات دکمه درون کادر اول از کادرهای سه تایی پس از قرار گیری ماوس روی آن*/
+.bluebox>.box1>a>.button:hover {
+    color: rgb(181, 218, 240);
+    border-color: rgb(181, 218, 240);
+}
+
+/*محتویات و توضیحات درون کادر دوم از کادرهای سه تایی ابی*/
+.bluebox>.box2>span {
+    font-size: 60px;
+}
+
+.bluebox>.box2>.title {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+.bluebox>.box2>.subtitle {
+    font-size: 17px;
+    padding-bottom: 25px;
+}
+
+/*دکمه درون کادر دوم از کادرهای سه تایی*/
+.bluebox>.box2>a>.button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/*تغییرات دکمه درون کادر دوم از کادرهای سه تایی پس از قرار گیری ماوس روی آن*/
+.bluebox>.box2>a>.button:hover {
+    color: rgb(181, 218, 240);
+    border-color: rgb(181, 218, 240);
+}
+
+/*محتویات و توضیحات درون کادر سوم از کادرهای سه تایی ابی*/
+.bluebox>.box3>span {
+    font-size: 60px;
+}
+
+.bluebox>.box3>.title {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+.bluebox>.box3>.subtitle {
+    font-size: 17px;
+    padding-bottom: 25px;
+}
+
+/*دکمه درون کادر سوم از کادرهای سه تایی*/
+.bluebox>.box3>a>.button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/*تغییرات دکمه درون کادر سوم از کادرهای سه تایی پس از قرار گیری ماوس روی آن*/
+.bluebox>.box3>a>.button:hover {
+    color: rgb(181, 218, 240);
+    border-color: rgb(181, 218, 240);
+}
+
+/*قسمت دوم از بخش اصلی صفحه */
+.second-part {
+    margin-top: 360px;
+}
+
+/*چهار باکس بخش اصلی صفحه شامل لوگو و توضیحات*/
+.second-part>.d {
+    width: 42.5%;
+    height: 120px;
+    float: left;
+    margin-bottom: 25px;
+}
+
+.second-part>.div1,
+.div3 {
+    margin-left: 6%;
+    margin-right: 3%;
+}
+
+.second-part>.div2,
+.div4 {
+    margin-right: 6%;
+}
+
+.second-part>.d>.pic {
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 50%;
+}
+
+.second-part>.d>.pac>.title {
+    font-size: 20px;
+    padding-bottom: 15px;
+    color: rgb(47, 47, 47);
+}
+
+.second-part>.d>.pac>.subtitle {
+    font-size: 17px;
+    color: rgb(117, 117, 117);
+}
+
+/*خط آبی جداکننده وسط صفحه*/
+.hr {
+    width: 3%;
+    height: 2px;
+    background-color: rgb(136, 201, 238);
+    clear: both;
+    margin-left: 50%;
+    transform: translate(-50%, 30px);
+    margin-bottom: 100px;
+}
+
+/* دو کادر شامل توضیحات و عنوان در بخش اصلی صفحه*/
+.second-part>.sec1 {
+    margin-left: 6%;
+    width: 42.5%;
+    height: 200px;
+    margin-right: 3%;
+    float: left;
+    margin-bottom: 100px;
+}
+
+.second-part>.sec2 {
+    float: left;
+    width: 42.5%;
+    height: 200px;
+    margin-bottom: 80px;
+}
+
+.second-part>.sec>.pre {
+    color: rgb(117, 117, 117);
+    font-size: 15px;
+}
+
+.second-part>.sec>.title {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.second-part>.sec>.subtitle {
+    color: rgb(117, 117, 117);
+    font-size: 17px;
+}
+
+.second-part>.sec>.subtitle>span {
+    color: rgb(67, 170, 228);
+    font-weight: 600;
+}
+
+/*بخش شامل چهار باکس با اعداد و آمار مربوط به صفحه*/
+.third-part>.part {
+    width: 25%;
+    height: 250px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.third-part>.part1 {
+    background-color: rgb(35, 136, 194);
+    clear: both;
+}
+
+.third-part>.part2 {
+    background-color: rgb(55, 156, 214);
+}
+
+.third-part>.part3 {
+    background-color: rgb(95, 180, 228);
+}
+
+.third-part>.part4 {
+    background-color: rgb(128, 199, 239);
+}
+
+.third-part>.part>.number {
+    font-size: 35px;
+    color: white;
+}
+
+.third-part>.part>.number>span {
+    color: rgb(182, 223, 246);
+    font-size: 27px;
+}
+
+.third-part>.part>.subtitle {
+    color: rgb(101, 108, 112);
+    font-size: 20px;
+}
+
+/* بخش شامل یک عکس در سمت چپ و یک کادر آبی همراه با توضیحات در سمت راست*/
+.third-part>.part5 {
+    float: left;
+    width: 50%;
+    height: 500px;
+    background-image: url(./pic/hospital.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.third-part>.part6 {
+    float: left;
+    width: 50%;
+    height: 500px;
+    background-color: rgb(34, 104, 158);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.third-part>.part6>.pre {
+    font-size: 15px;
+}
+
+.third-part>.part6>.title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.third-part>.part6>.subtitle {
+    font-size: 17px;
+}
+
+/*بخش شامل عنوان اسلایدر و اسلایدر*/
+.forth-part {
+    clear: both;
+    margin-top: 1500px;
+}
+
+/*عنوان بالای اسلایدر*/
+.forth-part>p {
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.forth-part>.title {
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*اسلایدر عکس شامل سه عکس به همرا توضیحات زیر آن*/
+.slider {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.slider>div {
+    width: 30%;
+
+}
+
+.slider>.box1>a>.img {
+    width: 100%;
+    height: 300px;
+    background-image: url(./pic/medical-team-1-495x400.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.slider>.box2>a>.img {
+    width: 100%;
+    height: 300px;
+    background-image: url(./pic/hospital-495x400.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.slider>.box3>a>.img {
+    width: 100%;
+    height: 300px;
+    background-image: url(./pic/dentist-1-495x400.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+/*صفحه شیشه ای که وقتی ماوس روی عکس ها قرار گرفت ظاهر می شود*/
+.glass {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    font-size: 20px;
+}
+
+/*تغییرات عکس ها وقتی ماوس روی آن هاست*/
+.glass:hover {
+    background-color: rgba(255, 255, 255, 0.68);
+}
+
+.glass:hover .circle {
+    background-color: rgba(71, 170, 219, 0.577);
+    color: rgba(255, 255, 255, 0.68);
+    animation-name: vv ;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.29, .68, .79, .63);
+}
+
+@keyframes vv {
+    0% {
+        position: relative;
+    }
+
+    50% {
+        transform: scale(1.1) rotate(30deg);
+    }
+    100%{
+        position: relative;
+    }
+}
+
+/*توضیحات زیر عکس ها*/
+.slider>div>a>.subtitle {
+    width: 100%;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    color: rgb(85, 85, 85);
+    font-size: 20px;
+}
+
+.slider>div>.date {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    color: rgb(158, 158, 158);
+}
+
+.slider>div>.text {
+    margin-top: 15px;
+    width: 100%;
+    height: 200px;
+    font-size: 16px;
+    color: rgb(127, 127, 127);
+}
+
+/*بخش اول پایین صفحه شامل آدرس و شماره تماس و موارد مشابه دارای سه کادر*/
+.footer1 {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(35, 136, 194);
+    color: white;
+    display: flex;
+}
+
+.footer1>.fbox1 {
+    width: 26%;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 6%;
+    margin-right: 5%;
+}
+
+.footer1>.fbox2 {
+    width: 26%;
+    height: 250px;
+    margin-top: 50px;
+    margin-right: 5%;
+}
+
+.footer1>.fbox3 {
+    width: 26%;
+    height: 250px;
+    margin-top: 50px;
+}
+
+.footer1>.f>.title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.footer1>.f>.text {
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.footer1>.fbox2>.text>.t1 {
+    margin-bottom: 20px;
+}
+
+/*نوار پایین صفحه*/
+.footer2 {
+    background-color: rgb(33, 131, 184);
+    color: white;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer2 a {
+    color: white;
+}
+
+/*تغییرات گزینه های نوار پایین صفحه وقتی ماوس روی آن هاست*/
+.footer2 a:hover {
+    text-decoration: underline;
+}
+
+/*محتویات نوار پایین صفحه شامل یک متن همراه لینک و یک منو*/
+.left-text {
+    width: 370px;
+    margin-left: 6%;
+    font-size: 12px;
+}
+
+.footer2>ul {
+    list-style: none;
+    margin-right: 10%;
+    display: flex;
+    font-size: 12px;
+}
+
+.footer2>ul>a>li {
+    margin-right: 20px;
+}
+
+/*دکمه بازگشت به بالای صفحه*/
+.second-part>a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(100, 168, 205);
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+
+}
+
+.second-part>a>span {
+    color: white;
+}
+
+/*ریسپانسیو صفحه که برای دو سایز مختلف تعریف شده*/
+@media only screen and (min-width:750px) and (max-width:930px) {
+
+    /*تغییرات اندازه محتویات باکس های سه تایی آبی رنگ*/
+    .bluebox>.box1,
+    .bluebox>.box2,
+    .bluebox>.box3 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .bluebox>.box1>span,
+    .bluebox>.box2>span,
+    .bluebox>.box3>span {
+        font-size: 40px;
+    }
+
+    .bluebox>.box1>.title,
+    .bluebox>.box2>.title,
+    .bluebox>.box3>.title {
+        font-size: 18px;
+    }
+
+    .bluebox>.box1>.subtitle,
+    .bluebox>.box2>.subtitle,
+    .bluebox>.box3>.subtitle {
+        font-size: 15px;
+    }
+
+    .bluebox>.box1>a>.button,
+    .bluebox>.box2>a>.button,
+    .bluebox>.box3>a>.button {
+        font-size: 13px;
+    }
+
+    /*تغییر نحوه قرار گیری دو باکس درون صفحه که زیر خط آبی جداکننده هستند*/
+    .second-part>.sec1 {
+        width: 88%;
+        height: 120px;
+    }
+
+    .second-part>.sec2 {
+        width: 88%;
+        margin-left: 6%;
+        height: 180px;
+    }
+
+    /*تغییرات سایز محتویات کادر آبی متنی کنار عکس */
+    .third-part>.part6>.pre {
+        font-size: 13px;
+        padding-bottom: 5px;
+    }
+
+    .third-part>.part6>.title {
+        font-size: 25px;
+    }
+
+    .third-part>.part6>.subtitle {
+        font-size: 15px;
+    }
+
+    /*تغییر اندازه محتویات بخش زیر عکس ها*/
+    .forth-part {
+        padding-top: 50px;
+    }
+
+    .forth-part>.title {
+        font-size: 30px;
+        padding-top: 5px;
+    }
+
+    /*تغییر اندازه بخش پایین صفحه کادر آبی رنگ و نوار زیر آن*/
+    .footer1>.f>.title {
+        font-size: 18px;
+    }
+
+    .footer1>.f>.text {
+        font-size: 15px;
+    }
+
+    .left-text {
+        margin-left: 6%;
+        font-size: 11px;
+    }
+
+    .footer2>ul {
+        font-size: 11px;
+    }
+
+    .footer2>ul>a>li {
+        margin-right: 15px;
+    }
+}
+
+/*ریسپانسیو حالت دوم*/
+@media (min-width:0px) and (max-width:749px) {
+
+    /*تغییرات نوار ابی بالای صفحه*/
+    .top-line {
+        height: 70px;
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    .top-line>p {
+        padding-bottom: 15px;
+    }
+
+    /*تغییرات نوار شامل لوگو و آیکون ها و منو*/
+    .header {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .logo {
+        width: 300px;
+        height: 70px;
+    }
+
+    .hheader {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .header>div:nth-child(2) {
+        padding-bottom: 10px;
+    }
+
+    .header>div:nth-child(2)>a>i {
+        height: 30px;
+    }
+
+    /*تغییرات منو*/
+    nav {
+        display: none;
+    }
+
+    nav>ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 180px;
+    }
+
+    nav>ul>a {
+        width: 100%;
+    }
+
+    nav>ul>a>li {
+        width: 100%;
+        color: white;
+        border-bottom: 1px solid rgb(149, 148, 148);
+        justify-content: flex-start;
+
+    }
+
+    nav>ul>a:first-child>li {
+        color: white;
+    }
+
+    .mm {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        position: relative;
+        top: 1px;
+        left: 0px;
+        background-color: rgb(64, 168, 228);
+        box-shadow: none;
+        border: none;
+    }
+
+    .mm>ul {
+        width: 100%;
+    }
+
+    .mm>ul>a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgb(149, 148, 148);
+        height: 50px;
+        font-size: 13px;
+    }
+
+    .mm>ul>a>li {
+        width: 80%;
+        border: none;
+        color: white;
+    }
+
+    .mm>ul>a>span {
+        display: inline-block;
+        color: white;
+    }
+
+    #toggle {
+        display: none
+    }
+
+    #toggle:checked~nav {
+        display: inline-block;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background-color: rgb(64, 168, 228);
+        color: white;
+    }
+
+    #toggle:checked~.toggle-container {
+        position: fixed;
+    }
+
+    #toggle:checked~.toggle-container>span:first-child {
+        display: none;
+    }
+
+    #toggle:checked~.toggle-container>span:nth-child(2) {
+        display: inline-block;
+        font-size: 30px;
+    }
+
+    .toggle-container {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-left: 100%;
+        transform: translate(-250%, -55px);
+        position: relative;
+        z-index: 40;
+    }
+
+    .toggle-container>span:first-child {
+        display: inline-block;
+        font-size: 30px;
+    }
+
+    .toggle-container>span:nth-child(2) {
+        display: none;
+    }
+
+    /*ظاهر گزینه های منو وقتی موس روی آن هاست*/
+    nav>ul>a>li:hover {
+        color: white;
+        background-color: rgb(56, 161, 217);
+    }
+
+    .mm>ul>a:hover {
+        color: white;
+        background-color: rgb(56, 161, 217);
+    }
+
+    .toggle-container:hover {
+        cursor: pointer;
+    }
+
+    /*تغییرات بخش شامل عنوان و دکمه ها در اول صفحه*/
+    .doc1 {
+        height: 240px;
+        padding-top: 10px;
+        margin-top: -20px;
+    }
+
+    .doc1>.title {
+        width: 200px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .doc1>.subtitle {
+        width: 200px;
+        height: 40px;
+        font-size: 15px;
+        margin-top: -10px;
+    }
+
+    .doc1>a>.button1 {
+        width: 90px;
+        height: 25px;
+        font-size: 11px;
+        margin-top: 45px;
+        clear: both;
+    }
+
+    .doc1>a>.button2 {
+        width: 140px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: 0px;
+        font-size: 11px;
+        clear: both;
+    }
+
+    /*تغییرات باکس های سه تایی آبی رنگ*/
+    .bluebox {
+        height: 750px;
+        margin-top: -30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bluebox>.box1 {
+        height: 300px;
+        width: 100%;
+    }
+
+    .bluebox>.box2 {
+        height: 300px;
+        width: 100%;
+    }
+
+    .bluebox>.box3 {
+        height: 250px;
+        width: 100%;
+    }
+
+    .bluebox>.box1>span,
+    .bluebox>.box2>span,
+    .bluebox>.box3>span {
+        font-size: 40px;
+    }
+
+    .bluebox>.box1>.title,
+    .bluebox>.box2>.title,
+    .bluebox>.box3>.title {
+        font-size: 17px;
+    }
+
+    .bluebox>.box1>.subtitle,
+    .bluebox>.box2>.subtitle,
+    .bluebox>.box3>.subtitle {
+        font-size: 15px;
+    }
+
+    .bluebox>.box1>a>.button,
+    .bluebox>.box2>a>.button,
+    .bluebox>.box3>a>.button {
+        font-size: 13px;
+    }
+
+    /*تغییرات بخش زیر باکس های آبی رنگ شامل چهار کادر به همراه متن و ایکون*/
+    .second-part {
+        margin-top: 770px;
+    }
+
+    .second-part>.d {
+        width: 88%;
+        height: 120px;
+        clear: both;
+        margin-bottom: 20px;
+        margin-left: 6%;
+        margin-right: 0px;
+    }
+
+
+    .second-part>.d>.pac>.title {
+        font-size: 18px;
+    }
+
+    .second-part>.d>.pac>.subtitle {
+        font-size: 16px;
+    }
+
+    /*تغییر سایز خط آبی جداکننده*/
+    .hr {
+        width: 60%;
+    }
+
+    /*تغییرات دو باکس شامل عنوان و توضیحات در بخش اصلی صفحه*/
+
+    .second-part>.sec1 {
+        width: 88%;
+        height: 120px;
+    }
+
+    .second-part>.sec2 {
+        width: 88%;
+        margin-left: 6%;
+        height: 180px;
+    }
+
+    .second-part>.sec>.pre {
+        font-size: 13px;
+    }
+
+    .second-part>.sec>.title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .second-part>.sec>.subtitle {
+        font-size: 15px;
+    }
+
+    .third-part>.part {
+        width: 100%;
+        height: 150px;
+    }
+
+    /*تغییرات باکس های شامل آمار و اعداد پیج*/
+    .third-part>.part>.number {
+        font-size: 30px;
+    }
+
+    .third-part>.part>.number>span {
+        font-size: 23px;
+    }
+
+    .third-part>.part>.subtitle {
+        font-size: 17px;
+    }
+
+    /*تغییرات بخشی که شامل یک عکس و یک کادر آبی به همراه متن کنارش بود*/
+    .third-part>.part5 {
+        float: left;
+        width: 100%;
+        height: 300px;
+    }
+
+    .third-part>.part6 {
+        width: 100%;
+        height: 300px;
+    }
+
+    .third-part>.part6>.pre {
+        font-size: 13px;
+        padding-bottom: 8px;
+    }
+
+    .third-part>.part6>.title {
+        font-size: 24px;
+    }
+
+    .third-part>.part6>.subtitle {
+        font-size: 15px;
+    }
+
+    /*تغییرات بخش اسلایدر عکس ها*/
+    .forth-part {
+        padding-top: 50px;
+    }
+
+    .forth-part>.title {
+        font-size: 30px;
+        padding-top: 5px;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
+
+    .slider>div {
+        width: 100%;
+
+    }
+
+    .slider>div>a>.subtitle {
+        font-size: 19px;
+    }
+
+    .slider>div>.text {
+        height: 100px;
+    }
+
+    /*تغییرات بخش پایانی صفحه شامل دو بخش آبی رنگ*/
+    .footer1 {
+        height: 650px;
+        flex-direction: column;
+    }
+
+    .footer1>.fbox1 {
+        width: 88%;
+        height: 200px;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    .footer1>.fbox2 {
+        width: 88%;
+        height: 200px;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    .footer1>.fbox3 {
+        width: 88%;
+        margin-left: 6%;
+        margin-right: 6%;
+        height: 200px;
+        padding-bottom: 50px;
+
+    }
+
+    .footer2 {
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-text {
+        width: 88%;
+        margin-left: 6%;
+        margin-right: 6%;
+        padding-bottom: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .footer2>ul {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+}
